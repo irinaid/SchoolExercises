@@ -46,3 +46,11 @@ for i in range(0, len(photos_album)):
   image.save("album/image" + str(i), "JPEG")
 
 # Iterate over the list to make other transformations!
+for i in range(0, len(photos_album)):
+  image = photos_album[i].rotate(180)
+  image.save("album/rotated_image" + str(i), "JPEG")
+  
+for i in range(0, len(photos_album)):
+  image = photos_album[i].transpose(Image.FLIP_LEFT_RIGHT)
+  image.save("album/flipped_image" + str(i), "JPEG")
+  
